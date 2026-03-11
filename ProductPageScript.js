@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const recSwiper = new Swiper(".recSwiper", {
-    slidesPerView: 1.3, // Standard mobile view
+    slidesPerView: 1.3, 
     spaceBetween: 15,
     navigation: {
       nextEl: ".arrow-right",
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       draggable: true,
     },
     breakpoints: {
-      // Changed from 375 to 481 to prevent 375px breaking
       481: {
         slidesPerView: 2.3,
         spaceBetween: 20,
