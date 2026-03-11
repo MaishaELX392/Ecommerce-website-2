@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Fit Product Page</title>
-    <link rel="stylesheet" href="ProductPageStyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+      <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-
+<div class="menu-overlay" id="menuOverlay"></div>
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <div class="close-menu" id="closeMenu">✕</div>
+        </div>
+        <nav class="side-nav-links">
+            <a href="#">WOMENS</a>
+            <a href="#">MENS</a>
+            <a href="#">ACCESSORIES</a>
+            <hr>
+            <a href="#">MY ACCOUNT</a>
+            <a href="#">BLOG</a>
+            <a href="#">HELP</a>
+        </nav>
+    </div>
 <div class="page-container">
 
     <!-- HEADER -->
@@ -30,7 +46,8 @@
 
         <!-- Main Header -->
         <div class="main-header">
-            <div class="mobile-menu-btn"></div>
+            <div class="mobile-menu-btn" id="hamburgerBtn"></div>
+            <div class="mobile-search-btn"></div>
             <div class="logo"></div>
 
             <nav class="main-nav">
@@ -207,7 +224,8 @@
             </aside>
   </div> </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
 
 <section class="recommendations-section">
   <div class="rec-tabs">
@@ -262,6 +280,19 @@
             </div>
           </div>
 
+<div class="swiper-slide rec-card card-full">
+            <div class="img-container">
+              <img src="images/products/Barrel Bag.png" alt="Bag">
+              <button class="wishlist-overlay"></button>
+            </div>
+            <div class="rec-info">
+              <span class="rec-tag">NEW</span>
+              <span class="rec-price">£30.00</span>
+              <h4 class="rec-title">Barrel Bag</h4>
+              <p class="rec-color">Paige Pink</p>
+            </div>
+          </div>
+
           <div class="swiper-slide rec-card card-full">
             <div class="img-container">
               <img src="images/products/2.2L Water Bottle.png" alt="Bottle">
@@ -274,10 +305,21 @@
               <p class="rec-color">Alpine Green</p>
             </div>
           </div>
-
+<div class="swiper-slide rec-card card-full">
+            <div class="img-container">
+              <img src="images/products/Sports Tech Boxers 2pk.png" alt="Boxers">
+              <button class="wishlist-overlay"></button>
+            </div>
+            <div class="rec-info">
+              <span class="rec-tag">NEW</span>
+              <span class="rec-price">£20.00</span>
+              <h4 class="rec-title">Sports Tech Boxers 2pk</h4>
+              <p class="rec-color">Black/Core Olive</p>
+            </div>
+          </div>
           <div class="swiper-slide rec-card card-slim">
             <div class="img-container">
-              <img src="images/products/Product Peek.png" alt="Peek">
+              <img src="images/products/2.2L Water Bottle.png" alt="Peek">
                  <button class="wishlist-overlay"></button>
               <div class="peek-white-bar"></div>
             </div>
@@ -390,8 +432,79 @@
         </div>
     </div>
 </footer>
+<footer class="mobile-footer">
+    <div class="account-btn-container">
+        <a href="#" class="mobile-account-btn" >MY ACCOUNT</a>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <div class="accordion-item">
+        <button class="accordion-header">HELP</button>
+        <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Delivery Information</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Make A Return</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Submit a Fake</a></li>
+        </ul>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">PAGES</button>
+        <ul class="footer-links">
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Student Beans</a></li>
+            <li><a href="#">Youth Discount</a></li>
+        </ul>
+    </div>
+
+    <div class="more-gym-section">
+        <h3 class="section-title">MORE ABOUT GYM</h3>
+        <div class="mobile-media-grid">
+            <div class="media-card">
+                <div class="media-img css-img-blog"></div>
+                <a href="#" class="media-link">BLOG</a>
+            </div>
+            <div class="media-card">
+                <div class="media-img css-img-newsletter"></div>
+                <a href="#" class="media-link">NEWSLETTER</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-footer-bottom">
+        <div class="social-links">
+            <a href="#" class="social-item css-discord"></a>
+            <a href="#" class="social-item css-facebook"></a>
+            <a href="#" class="social-item css-pinterest"></a>
+            <a href="#" class="social-item css-youtube"></a>
+            <a href="#" class="social-item css-instagram"></a>
+            <a href="#" class="social-item css-twitter"></a>
+            <a href="#" class="social-item css-tiktok"></a>
+        </div>
+
+        <nav class="legal-links">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Modern Slavery</a>
+        </nav>
+
+        <div class="payment-icons">
+            <span class="card-img css-visa"></span>
+            <span class="card-img css-mastercard"></span>
+            <span class="card-img css-amex"></span>
+            <span class="card-img css-paypal"></span>
+            <span class="card-img css-klarna"></span>
+            <span class="card-img css-applepay"></span>
+        </div>
+
+        <p class="copyright">© 2022 | Gym Limited |<br>All Rights Reserved | Be a visionary</p>
+    </div>
+</footer>
+
 <script src="ProductPageScript.js"></script>
 
 

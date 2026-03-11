@@ -1,33 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Initialize Swiper
-  const swiper = new Swiper(".recSwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 10,
-    grabCursor: true,
-    // Connect your existing arrow buttons
+document.addEventListener("DOMContentLoaded", function () {
+  const recSwiper = new Swiper(".recSwiper", {
+    slidesPerView: 1.3, // Standard mobile view
+    spaceBetween: 15,
     navigation: {
       nextEl: ".arrow-right",
       prevEl: ".arrow-left",
     },
-    // Custom Scrollbar Fill Logic
-    on: {
-      progress: function (s) {
-        const fill = document.querySelector(".swiper-scrollbar-custom");
-        if (!fill) return;
-
-        const container = document.querySelector(".scroll-bar-bg");
-        const totalWidth = container.offsetWidth;
-        const fillWidth = fill.offsetWidth; // 132px from your CSS
-        const maxTravel = totalWidth - fillWidth;
-
-        // Calculate movement (s.progress is 0 to 1)
-        const move = s.progress * maxTravel;
-        fill.style.transform = `translateX(${move}px)`;
+    scrollbar: {
+      el: ".swiper-scrollbar-custom",
+      draggable: true,
+    },
+    breakpoints: {
+      // Changed from 375 to 481 to prevent 375px breaking
+      481: {
+        slidesPerView: 2.3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4.3,
+        spaceBetween: 20,
       },
     },
   });
 
-  // 2. Tab Switching Logic
   const tabButtons = document.querySelectorAll(".tab-item");
   const tabContents = document.querySelectorAll(".tab-content");
 
@@ -35,23 +30,52 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const targetId = button.getAttribute("data-tab");
 
-      // Update Active Button State
       tabButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-
-      // Update Active Content State
       tabContents.forEach((content) =>
         content.classList.remove("active-content"),
       );
 
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.classList.add("active-content");
+      button.classList.add("active");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.classList.add("active-content");
+      }
 
-        // CRITICAL: Tell Swiper to recalculate dimensions now that
-        // the container is visible (display: block)
-        swiper.update();
+      recSwiper.update();
+    });
+  });
+
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+  accordionHeaders.forEach((header) => {
+    header.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content) {
+        content.style.display =
+          content.style.display === "block" ? "none" : "block";
       }
     });
   });
+
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const sideMenu = document.getElementById("sideMenu");
+  const menuOverlay = document.getElementById("menuOverlay");
+  const closeMenu = document.getElementById("closeMenu");
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      sideMenu.classList.add("active");
+      menuOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  }
+
+  const hideMenu = () => {
+    sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    document.body.style.overflow = "auto";
+  };
+
+  if (closeMenu) closeMenu.addEventListener("click", hideMenu);
+  if (menuOverlay) menuOverlay.addEventListener("click", hideMenu);
 });

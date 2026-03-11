@@ -3,11 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hopme Page</title>
-    <link rel="stylesheet" href="ProductPageStyle.css" />
-    <link rel="stylesheet" href="HomePageStyle.css" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <div class="close-menu" id="closeMenu">✕</div>
+        </div>
+        <nav class="side-nav-links">
+            <a href="#">WOMENS</a>
+            <a href="#">MENS</a>
+            <a href="#">ACCESSORIES</a>
+            <hr>
+            <a href="#">MY ACCOUNT</a>
+            <a href="#">BLOG</a>
+            <a href="#">HELP</a>
+        </nav>
+    </div>
+
     <div class="page-container">
       <!-- HEADER -->
       <header>
@@ -28,7 +44,9 @@
 
         <!-- Main Header -->
         <div class="main-header">
-          <div class="mobile-menu-btn"></div>
+
+           <div class="mobile-menu-btn" id="hamburgerBtn"></div>
+            <div class="mobile-search-btn"></div>
           <div class="logo"></div>
 
           <nav class="main-nav">
@@ -51,10 +69,13 @@
         <div class="returns-banner">FREE RETURNS NOW FOR 30 DAYS*</div>
       </header>
 
-
-<!-- Hero Banner -->
+      <!-- Hero Banner -->
       <section class="hero-section">
-        <img src="HomePage image/main/hero image.png" alt="hero image" class="hero-bg-img" />
+        <img
+          src="HomePage image/main/hero image.png"
+          alt="hero image"
+          class="hero-bg-img"
+        />
 
         <div class="hero-content-wrapper">
           <div class="container">
@@ -69,9 +90,7 @@
         </div>
       </section>
 
-<!-- Collection Grid -->
-
-<section class="collection-section">
+      <section class="collection-section desktop-version">
   <div class="collection-header">
     <div class="header-left">
       <p class="category-tag">MEN & WOMEN</p>
@@ -81,32 +100,40 @@
   </div>
 
   <div class="product-grid">
-
     <div class="product-card">
       <div class="image-container">
-        <img src="12.jpg" alt="Product 1" class="product-img">
+        <img src="HomePage image/main/Legacy T-Shirt.png" alt="Legacy T-Shirt" class="product-img" />
         <div class="fit-tag">SLIM FIT</div>
         <div class="quick-add-overlay">
-           <p class="quick-add-title">QUICK ADD</p>
-           <div class="size-options">
-             <a href="#">S</a><a href="#">M</a><a href="#">L</a>
-           </div>
+          <p class="quick-add-title">QUICK ADD</p>
+          <div class="size-options">
+            <a href="#">S</a><a href="#">M</a><a href="#">L</a>
+          </div>
         </div>
       </div>
       <div class="product-info">
-        <div class="info-top"><span class="new-tag">| NEW</span><span class="price">£32</span></div>
+        <div class="info-top">
+          <span class="new-tag">NEW</span><span class="price">£32</span>
+        </div>
         <p class="product-name">Legacy T-Shirt</p>
         <p class="product-color">Black</p>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card active">
       <div class="image-container">
-        <img src="12.jpg" alt="Product 2" class="product-img">
-        <div class="fit-tag">SLIM FIT</div>
+        <img src="HomePage image/main/Legacy Shorts.png" alt="Legacy Shorts" class="product-img" />
+        <div class="quick-add-overlay">
+          <p class="quick-add-title">QUICK ADD</p>
+          <div class="size-options">
+            <a href="#">XS</a><a href="#">S</a><a href="#">M</a><a href="#">L</a><a href="#">XL</a><a href="#">XXL</a><a href="#" class="disabled">3XL</a>
+          </div>
         </div>
+      </div>
       <div class="product-info">
-        <div class="info-top"><span class="new-tag">| NEW</span><span class="price">£32</span></div>
+        <div class="info-top">
+          <span class="new-tag"> NEW</span><span class="price">£32</span>
+        </div>
         <p class="product-name">Legacy Shorts</p>
         <p class="product-color">Black</p>
       </div>
@@ -114,11 +141,13 @@
 
     <div class="product-card">
       <div class="image-container">
-        <img src="12.jpg" alt="Product 3" class="product-img">
+        <img src="HomePage image/main/Adapt Leggings.png" alt="Adapt Leggings" class="product-img" />
         <div class="fit-tag">SLIM FIT</div>
-        </div>
+      </div>
       <div class="product-info">
-        <div class="info-top"><span class="new-tag">| NEW</span><span class="price">£40</span></div>
+        <div class="info-top">
+          <span class="new-tag"> NEW</span><span class="price">£40</span>
+        </div>
         <p class="product-name">Adapt Leggings</p>
         <p class="product-color">Black</p>
       </div>
@@ -126,19 +155,790 @@
 
     <div class="product-card">
       <div class="image-container">
-        <img src="12.jpg" alt="Product 4" class="product-img">
+        <img src="HomePage image/main/Legacy Stringer.png" alt="Legacy Stringer" class="product-img" />
         <div class="fit-tag">SLIM FIT</div>
-        </div>
+      </div>
       <div class="product-info">
-        <div class="info-top"><span class="new-tag">| NEW</span><span class="price">£60</span></div>
+        <div class="info-top">
+          <span class="new-tag">NEW</span><span class="price">£60</span>
+        </div>
         <p class="product-name">Legacy Stringer</p>
         <p class="product-color">Black</p>
       </div>
     </div>
-
   </div>
 </section>
 
+<section class="collection-section mobile-version">
+  <div class="mobile-header">
+    <p class="category-tag">MEN & WOMEN</p>
+    <h2 class="collection-title">LEGACY COLLECTION</h2>
+    <a href="javascript:void(0)" class="mobile-view-all-btn" id="mobileViewAll">View All</a>
+  </div>
+
+  <div class="product-grid-mobile" id="mobileGrid">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy T-Shirt.png" class="product-img" />
+        <div class="mobile-fit-tag">REGULAR FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£32</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy Shorts.png" class="product-img" />
+        <div class="mobile-fit-tag">REGULAR FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy Shorts</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£32</p>
+      </div>
+    </div>
+
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Adapt Leggings.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Adapt Leggings</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£40</p>
+      </div>
+    </div>
+
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy Stringer.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy Stringer</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£60</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <section class="promo-hero">
+        <img
+          src="HomePage image/main/promo.png"
+          alt="All New Design"
+          class="promo-bg-img"
+        />
+
+        <div class="promo-overlay">
+          <div class="promo-content">
+            <h2 class="promo-title">ALL - NEW DESIGN</h2>
+            <p class="promo-subtitle">
+              When you put in the overtime, Apex steps up every time.
+            </p>
+
+            <div class="promo-buttons">
+              <a href="#" class="btn-white">SHOP WOMENS</a>
+              <a href="#" class="btn-transparent">SHOP MEN</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-section desktop-version">
+  <div class="collection-header">
+    <div class="header-left">
+      <h2 class="collection-title">NEW DESIGN COLLECTION</h2>
+    </div>
+    <a href="#" class="view-all">View All</a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy T-Shirt-1.png" alt="Legacy T-Shirt" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£40</span></div>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy T-Shirt-2.png" alt="Legacy T-Shirt" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£22</span></div>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Gray</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Adapt Leggings-2.png" alt="Adapt Fleck" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£60</span></div>
+        <p class="product-name">Adapt Fleck Seamless Leggings</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Perform Shorts.png" alt="Perform Shorts" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£35</span></div>
+        <p class="product-name">Perform Shorts</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collection-section mobile-version">
+  <div class="mobile-header">
+    <h2 class="collection-title">NEW DESIGN COLLECTION</h2>
+    <a href="javascript:void(0)" class="mobile-view-all-btn">View All</a>
+  </div>
+
+  <div class="product-grid-mobile">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy T-Shirt-1.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£40</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy T-Shirt-2.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Gray</p>
+        <p class="mobile-price-text">£22</p>
+      </div>
+    </div>
+
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Adapt Leggings-2.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Adapt Fleck Seamless Leggings</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£60</p>
+      </div>
+    </div>
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Perform Shorts.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Perform Shorts</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£35</p>
+      </div>
+    </div>
+  </div>
+</section>
+      <section class="hero-section secondary-hero">
+        <img
+          src="HomePage image/main/free-movement.png"
+          alt="Studio Collection"
+          class="hero-bg-img"
+        />
+
+        <div class="hero-content-wrapper">
+          <div class="container">
+            <div class="hero-text-box">
+              <h2 class="hero-title">FREE YOUR<br />MOVEMENT</h2>
+              <p class="hero-subtitle">In the latest Studio collection.</p>
+              <a href="#" class="hero-shop-link">SHOP</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-section desktop-version">
+  <div class="collection-header">
+    <div class="header-left">
+      <p class="category-tag">MENS</p>
+      <h2 class="collection-title">NEW RELEASES</h2>
+    </div>
+    <a href="#" class="view-all">View All</a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Studio-Amplify-Gray.png" alt="Studio Amplify T-Shirt" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£32</span></div>
+        <p class="product-name">Studio Amplify T-Shirt</p>
+        <p class="product-color">Gray</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-T-Shirt-Black.png" alt="Legacy T-Shirt" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£32</span></div>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Studio-Amplify-Red.png" alt="Studio Amplify T-Shirt" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£32</span></div>
+        <p class="product-name">Studio Amplify T-Shirt</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Tank-Black.png" alt="Legacy T-Shirt" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£32</span></div>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collection-section mobile-version">
+  <div class="mobile-header">
+    <div class="header-left">
+      <p class="category-tag">MENS</p>
+      <h2 class="collection-title">NEW RELEASES</h2>
+    </div>
+    <a href="javascript:void(0)" class="mobile-view-all-btn">View All</a>
+  </div>
+
+  <div class="product-grid-mobile">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Studio-Amplify-Gray.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Studio Amplify T-Shirt</p>
+        <p class="product-color">Gray</p>
+        <p class="mobile-price-text">£32</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-T-Shirt-Black.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£32</p>
+      </div>
+    </div>
+
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Studio-Amplify-Red.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Studio Amplify T-Shirt</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£32</p>
+      </div>
+    </div>
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Tank-Black.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy T-Shirt</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£32</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="promo-hero styling-section">
+        <img
+          src="HomePage image/main/simmons-bg.png"
+          alt="Styled By Simmons"
+          class="promo-bg-img"
+        />
+
+        <div class="promo-overlay">
+          <div class="promo-content">
+            <h2 class="promo-title">STYLED BY SIMMONS</h2>
+            <p class="promo-subtitle">
+              Whitney Simmons’s fave Gymshark gear, just for you
+            </p>
+
+            <div class="promo-buttons">
+              <a href="#" class="btn-white">SHOP</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-section desktop-version">
+  <div class="collection-header">
+    <div class="header-left">
+      <p class="category-tag">WOMENS</p>
+      <h2 class="collection-title">WHITNEY'S FAVES</h2>
+    </div>
+    <a href="#" class="view-all">View All</a>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Seamless-Black.png" alt="Legacy Seamless Leggings" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£42</span></div>
+        <p class="product-name">Legacy Seamless Leggings</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Seamless-Maroon.png" alt="Legacy Seamless Leggings" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£52</span></div>
+        <p class="product-name">Legacy Seamless Leggings</p>
+        <p class="product-color">Maroon</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Club-Black.png" alt="Legacy Club Leggings" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£60</span></div>
+        <p class="product-name">Legacy Club Leggings</p>
+        <p class="product-color">Black</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Adapt-Fleck-White.png" alt="Adapt Fleck Seamless Leggings" class="product-img" />
+        <div class="fit-tag">SLIM FIT</div>
+      </div>
+      <div class="product-info">
+        <div class="info-top"><span class="new-tag">NEW</span><span class="price">£40</span></div>
+        <p class="product-name">Adapt Fleck Seamless Leggings</p>
+        <p class="product-color">White</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collection-section mobile-version">
+  <div class="mobile-header">
+    <div class="header-left">
+      <p class="category-tag">WOMENS</p>
+      <h2 class="collection-title">WHITNEY'S FAVES</h2>
+    </div>
+    <a href="javascript:void(0)" class="mobile-view-all-btn">View All</a>
+  </div>
+
+  <div class="product-grid-mobile">
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Seamless-Black.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy Seamless Leggings</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£42</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Seamless-Maroon.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy Seamless Leggings</p>
+        <p class="product-color">Maroon</p>
+        <p class="mobile-price-text">£52</p>
+      </div>
+    </div>
+
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Legacy-Club-Black.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Legacy Club Leggings</p>
+        <p class="product-color">Black</p>
+        <p class="mobile-price-text">£60</p>
+      </div>
+    </div>
+    <div class="product-card mobile-extra-card">
+      <div class="image-container">
+        <img src="HomePage image/main/Adapt-Fleck-White.png" class="product-img" />
+        <div class="mobile-fit-tag">SLIM FIT</div>
+      </div>
+      <div class="mobile-product-info">
+        <span class="mobile-new-label">NEW</span>
+        <p class="product-name">Adapt Fleck Seamless Leggings</p>
+        <p class="product-color">White</p>
+        <p class="mobile-price-text">£40</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="promo-hero newsletter-section">
+        <img
+          src="HomePage image/main/newsletter-bg.png"
+          alt="Gymshark Newsletter"
+          class="promo-bg-img"
+        />
+
+        <div class="promo-overlay">
+          <div class="promo-content">
+            <h2 class="promo-title">
+              WANT EMAILS YOU'LL ACTUALLY<br />READ AND 10% OFF YOUR NEXT<br />GYMSHARK
+              FIX?
+            </h2>
+            <p class="promo-subtitle">Then click the button. Go on.</p>
+
+            <div class="promo-buttons">
+              <a href="#" class="btn-white">THE BUTTON</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo-hero thrift-section">
+        <img
+          src="HomePage image/main/thrift-bg.png"
+          alt="Thrift+"
+          class="promo-bg-img"
+        />
+
+        <div class="promo-overlay">
+          <div class="promo-content">
+            <div class="thrift-text-wrap">
+              <h2 class="promo-title">THRIFT+. SEND IT ON. EARN IT BACK*</h2>
+            </div>
+            <p class="promo-subtitle">
+              Add a free ThriftBag to your order to give clothes you don't want
+              a second life.
+              <br />*T&Cs Apply.
+            </p>
+
+            <div class="promo-buttons">
+              <a href="#" class="btn-white">ORDER NOW</a>
+              <a href="#" class="btn-transparent">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gender-split-section">
+        <div class="split-column shop-mens">
+          <img
+            src="HomePage image/main/shop-mens.png"
+            alt="Shop Mens"
+            class="split-bg-img"
+          />
+          <div class="split-content content-right">
+            <h2 class="split-title">SHOP MENS</h2>
+            <a href="#" class="btn-white">SHOP</a>
+          </div>
+        </div>
+
+        <div class="split-column shop-womens">
+          <img
+            src="HomePage image/main/shop-womens.png"
+            alt="Shop Womens"
+            class="split-bg-img"
+          />
+          <div class="split-content content-left">
+            <h2 class="split-title">SHOP WOMENS</h2>
+            <a href="#" class="btn-white">SHOP</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-cards-section">
+        <div class="info-card">
+          <img
+            src="HomePage image/main/student-discount.png"
+            alt="Student Discount"
+            class="card-bg-img"
+          />
+          <div class="card-overlay">
+            <h3 class="card-title">STUDENT DISCOUNT</h3>
+            <a href="#" class="btn-white">READ MORE</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <img
+            src="HomePage image/main/emergency-discount.png"
+            alt="Emergency Service Discount"
+            class="card-bg-img"
+          />
+          <div class="card-overlay">
+            <h3 class="card-title">EMERGENCY SERVICE &<br />NHS DISCOUNT</h3>
+            <a href="#" class="btn-white">READ MORE</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <img
+            src="HomePage image/main/clearpay.png"
+            alt="Pay in 4 with Clearpay"
+            class="card-bg-img"
+          />
+          <div class="card-overlay">
+            <h3 class="card-title">PAY IN 4 WITH CLEARPAY</h3>
+            <a href="#" class="btn-white">READ MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-community-section">
+        <div class="community-box">
+          <h2 class="community-title">MORE THAN YOUR BEST WORKOUT CLOTHING</h2>
+          <p class="community-text">
+            The Gym community is devoted to unlocking potential through
+            conditioning and the things we do today to prepare for tomorrow.
+            When it comes to performing at your max, there should be no
+            obstacles — least of all your workout clothes. So everything about
+            the gym clothes and accessories we design for you has your progress
+            and the best results in mind. We want you to have the most
+            comfortable gym hoodies, the most supportive seamless gym leggings
+            and the most innovatively designed workout shirts that are made to
+            move when it matters most.
+          </p>
+          <p class="community-text">
+            Game-changing workout clothing, running clothes and loungewear
+            essentials. It's not just in the designs, it's in the people who
+            wear them.
+          </p>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <div class="footer-inner">
+          <div class="footer-top-grid">
+            <div class="footer-col">
+              <h3 class="footer-heading">HELP</h3>
+              <ul class="footer-links">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Delivery Information</a></li>
+                <li><a href="#">Returns Policy</a></li>
+                <li><a href="#">Make A Return</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Submit a Fake</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-heading">MY ACCOUNT</h3>
+              <ul class="footer-links">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="footer-heading">PAGES</h3>
+              <ul class="footer-links">
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Emergency Services & NHS Discount</a></li>
+                <li><a href="#">Student Beans</a></li>
+                <li><a href="#">Youth Discount</a></li>
+                <li><a href="#">Accessibility Statement</a></li>
+                <li><a href="#">Group Tax Strategy</a></li>
+                <li><a href="#">Pay Gap Reports</a></li>
+                <li><a href="#">Factory List</a></li>
+              </ul>
+            </div>
+            <div class="footer-col more-gymshark">
+              <h3 class="footer-heading">MORE ABOUT GYMSHARK</h3>
+              <div class="media-card-grid">
+                <div class="media-card">
+                  <div class="media-img css-img-blog"></div>
+                  <a href="#" class="media-link">BLOG</a>
+                </div>
+                <div class="media-card">
+                  <div class="media-img css-img-newsletter"></div>
+                  <a href="#" class="media-link">NEWSLETTER</a>
+                </div>
+                <div class="media-card">
+                  <div class="media-img css-img-training"></div>
+                  <a href="#" class="media-link">GYMSHARK TRAINING</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-social-payment">
+            <div class="payment-icons">
+              <span class="card-img css-visa"></span>
+              <span class="card-img css-mastercard"></span>
+              <span class="card-img css-amex"></span>
+              <span class="card-img css-paypal"></span>
+              <span class="card-img css-klarna"></span>
+              <span class="card-img css-applepay"></span>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-item css-discord"></a>
+              <a href="#" class="social-item css-facebook"></a>
+              <a href="#" class="social-item css-pinterest"></a>
+              <a href="#" class="social-item css-youtube"></a>
+              <a href="#" class="social-item css-instagram"></a>
+              <a href="#" class="social-item css-twitter"></a>
+              <a href="#" class="social-item css-tiktok"></a>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="copyright">
+              © 2022 | Gym Limited | All Rights Reserved | Be a visionary
+            </p>
+            <nav class="legal-nav">
+              <a href="#">Terms and Conditions</a>
+              <a href="#">Terms of Use</a>
+              <a href="#">Privacy Notice</a>
+              <a href="#">Cookie Policy</a>
+              <a href="#">Modern Slavery</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <footer class="mobile-footer">
+    <div class="account-btn-container">
+        <a href="#" class="mobile-account-btn" >MY ACCOUNT</a>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">HELP</button>
+        <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Delivery Information</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Make A Return</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Submit a Fake</a></li>
+        </ul>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-header">PAGES</button>
+        <ul class="footer-links">
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Student Beans</a></li>
+            <li><a href="#">Youth Discount</a></li>
+        </ul>
+    </div>
+
+    <div class="more-gym-section">
+        <h3 class="section-title">MORE ABOUT GYM</h3>
+        <div class="mobile-media-grid">
+            <div class="media-card">
+                <div class="media-img css-img-blog"></div>
+                <a href="#" class="media-link">BLOG</a>
+            </div>
+            <div class="media-card">
+                <div class="media-img css-img-newsletter"></div>
+                <a href="#" class="media-link">NEWSLETTER</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-footer-bottom">
+        <div class="social-links">
+            <a href="#" class="social-item css-discord"></a>
+            <a href="#" class="social-item css-facebook"></a>
+            <a href="#" class="social-item css-pinterest"></a>
+            <a href="#" class="social-item css-youtube"></a>
+            <a href="#" class="social-item css-instagram"></a>
+            <a href="#" class="social-item css-twitter"></a>
+            <a href="#" class="social-item css-tiktok"></a>
+        </div>
+
+        <nav class="legal-links">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Modern Slavery</a>
+        </nav>
+
+        <div class="payment-icons">
+            <span class="card-img css-visa"></span>
+            <span class="card-img css-mastercard"></span>
+            <span class="card-img css-amex"></span>
+            <span class="card-img css-paypal"></span>
+            <span class="card-img css-klarna"></span>
+            <span class="card-img css-applepay"></span>
+        </div>
+
+        <p class="copyright">© 2022 | Gym Limited |<br>All Rights Reserved | Be a visionary</p>
+    </div>
+</footer>
     </div>
 
     <script src="HomePageScript.js"></script>
