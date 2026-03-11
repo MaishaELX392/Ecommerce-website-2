@@ -17,4 +17,39 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", function () {
+    this.classList.toggle("active");
+    const content = this.nextElementSibling;
+    if (content) {
+      content.style.display =
+        content.style.display === "block" ? "none" : "block";
+    }
+  });
+});
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const sideMenu = document.getElementById("sideMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+const closeMenu = document.getElementById("closeMenu");
+
+if (hamburgerBtn) {
+  hamburgerBtn.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    menuOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  });
+}
+
+const hideMenu = () => {
+  sideMenu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+  document.body.style.overflow = "auto";
+};
+
+if (closeMenu) closeMenu.addEventListener("click", hideMenu);
+if (menuOverlay) menuOverlay.addEventListener("click", hideMenu);
+
 });
