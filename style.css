@@ -467,9 +467,7 @@ h1 {
   border-width: 2px;
 }
 
-.size-grid button:nth-child(n + 6) {
-  grid-column: span 1;
-}
+
 
 /* --- ACTION BUTTONS --- */
 .action-buttons {
