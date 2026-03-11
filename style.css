@@ -381,7 +381,7 @@ h1 {
   gap: 4px;
   border-bottom: 1px solid #e7e7e7;
   padding-bottom: 14.41px;
-  margin-bottom: 17.59px;
+  margin-bottom: 17px;
 }
 
 .swatch {
@@ -411,7 +411,6 @@ h1 {
 }
 
 .size-label-row .label {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 13px;
   text-transform: uppercase;
@@ -620,7 +619,7 @@ h1 {
 }
 
 .main-desc {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   width: 340px;
   font-size: 16px;
   line-height: 23px;
@@ -686,7 +685,7 @@ h1 {
 .tab-item {
   background: none;
   border: none;
-  font-family: "Montserrat", sans-serif;
+
   font-size: 14px;
   font-weight: 500;
   color: #999;
@@ -851,7 +850,6 @@ h1 {
 }
 
 .blur-placeholder p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
   color: #888;
@@ -877,7 +875,6 @@ h1 {
 }
 
 .footer-heading {
-  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 13px;
@@ -947,7 +944,6 @@ h1 {
 
   padding: 5px 12px;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
 }
 .media-card a:hover {
   text-decoration: underline;
@@ -2634,7 +2630,7 @@ h1 {
   color: #888;
 }
 
-/* --- STUDIO BANNER SECTION (31.jpg) --- */
+/* --- STUDIO BANNER SECTION  --- */
 .studio-banner-section {
   position: relative;
   width: 100%;
@@ -2879,7 +2875,7 @@ h1 {
   }
 
   .category-grid-section .cat-overlay {
-    padding: 0 25px; /
+    padding: 0 25px; 
   }
 
   .category-grid-section .cat-title {
