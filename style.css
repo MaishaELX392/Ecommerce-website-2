@@ -1509,7 +1509,7 @@ h1 {
 }
 
 /* Hero-banner-Mobile */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .hero-section {
     height: auto;
     display: block;
